@@ -45,73 +45,93 @@
     ?>
 
     <div class="main-panel">
-
-    <?php
-    // Incluye el archivo 'header.php' solo una vez
-    include_once 'navegacion/navbar.php';
-    ?>    
-
+      <?php
+      // Incluye el archivo 'header.php' solo una vez
+      include_once 'navegacion/navbar.php';
+      ?>
       <div class="container">
         <div class="page-inner">
-          <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-            <div>
-              <h3 class="fw-bold mb-3">Dashboard</h3>
-            </div>
-            
+          <div class="page-header">
+            <h3 class="fw-bold mb-3">Empresas</h3>
+            <ul class="breadcrumbs mb-3">
+              <li class="nav-home">
+              </li>
+
+            </ul>
           </div>
           <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div class="card card-stats card-round">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Agregar Empresa</div>
+                </div>
                 <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div class="icon-big text-center icon-primary bubble-shadow-small">
-                        <i class="fas fa-users"></i>
+                  <div class="row">
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="name">Nombre de la Empresa</label>
+                        <input type="name" class="form-control" id="name" placeholder="Monte Alto XYZ" />
+                      </div>
+                      <div class="form-group">
+                        <label for="direccion">Direccion</label>
+                        <input type="direccion" class="form-control" id="direccion" placeholder="5ta. Calle 6-7" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlFile1">Logo de la Empresa</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" />
                       </div>
                     </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <p class="card-category">Empleados</p>
-                        <h4 class="card-title">1,294</h4>
+                    <div class="col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="tel1">Telefono No. 1</label>
+                        <input type="tel1" class="form-control" id="tel1" placeholder="0000-0000" />
                       </div>
+                      <div class="form-group">
+                        <label for="tel2">Telefono No. 2</label>
+                        <input type="tel2" class="form-control" id="tel2" placeholder="0000-0000" />
+                      </div>
+
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                        <i class="fas fa-user-check"></i>
-                      </div>
-                    </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <p class="card-category">IGSS</p>
-                        <h4 class="card-title">1303</h4>
-                      </div>
-                    </div>
-                  </div>
+                <div class="card-action d-flex justify-content-center">
+                  <button class="btn btn-success"> Guardar </button>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="card card-stats card-round">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-icon">
-                      <div class="icon-big text-center icon-success bubble-shadow-small">
-                        <i class="fas fa-hot-tub"></i>
-                      </div>
+          </div>
+          <h3 class="fw-bold mb-3">Empresas Registradas</h3>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-header" style="background-image: url('assets/img/portada.avif')">
+                  <div class="profile-picture">
+                    <div class="avatar avatar-xl">
+                      <img src="assets/img/montealto.png" alt="..." class="avatar-img rounded-circle" />
                     </div>
-                    <div class="col col-stats ms-3 ms-sm-0">
-                      <div class="numbers">
-                        <p class="card-category">Empresas</p>
-                        <h4 class="card-title">10</h4>
-                      </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="user-profile text-center">
+                    <div class="name">Monte Alto Cambote</div>
+                    <div class="job">Cambote Zona 11</div><br>
+                    <div class="desc">0000-0000</div>
+                    <div class="desc">0000-0000</div>
+                    <div class="view-profile">
+                      <a href="#" class="btn btn-secondary w-100">Editar Empresa</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row user-stats text-center">
+                    <div class="col">
+                      <div class="number">125</div>
+                      <div class="title">Empleados</div>
+                    </div>
+                    <div class="col">
+                      <div class="number">25K</div>
+                      <div class="title">IGSS</div>
                     </div>
                   </div>
                 </div>
@@ -144,9 +164,6 @@
 
   <!-- Datatables -->
   <script src="assets/js/plugin/datatables/datatables.min.js"></script>
-
-  <!-- Bootstrap Notify -->
-  <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
   <!-- jQuery Vector Maps -->
   <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>

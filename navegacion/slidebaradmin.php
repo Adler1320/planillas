@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="empresas.php">
                         <i class="fas fa-store"></i>
                         <p>Empresas</p>
                     </a>
