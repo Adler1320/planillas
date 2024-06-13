@@ -150,7 +150,7 @@
                     <div class="collapse" id="org">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="#">
+                                <a href="usuarios.php">
                                     <span class="sub-item">Usuarios</span>
                                 </a>
                             </li>
