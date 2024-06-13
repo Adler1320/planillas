@@ -128,8 +128,7 @@
                   </div>
                 </div>
                 <div class="card-action ms-auto me-auto">
-                  <button class="btn btn-success">EDITAR</button>
-                  <button class="btn btn-danger">BORRAR</button>
+                  <button class="btn btn-success">Agregar Usuario</button>
                 </div>
               </div>
             </div>
