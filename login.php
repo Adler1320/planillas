@@ -29,7 +29,7 @@
 <style>
     .logo {
       width: 250px; /* Ajusta el tamaño deseado */
-      height: 250px; /* Ajusta el tamaño deseado */
+      height: 100px; /* Ajusta el tamaño deseado */
     }
   </style>
 
@@ -44,9 +44,12 @@
 
 <body>
   <div class="wrapper">
+    
  <div class="text-center">
     <img src="assets/img/kaiadmin/logo_dark.svg" alt="" class="logo">
   </div>
+
+
     <div class="container">
       <div class="row justify-content-center mt-1">
         <div class="col-md-5">

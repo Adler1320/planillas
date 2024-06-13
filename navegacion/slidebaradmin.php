@@ -184,7 +184,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="perfil.php">
                         <i class="fas fa-user-circle"></i>
                         <p>Mi Perfil</p>
                     </a>
