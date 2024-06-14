@@ -61,7 +61,7 @@
               <br>
             </div>
             <div class="card-body">
-              <form>
+              <form id="loginForm">
                 <div class="form-group">
                   <label for="user">Usuario</label>
                   <input type="text" class="form-control" id="user" placeholder="Introduce tu usuario">
@@ -76,6 +76,7 @@
                 </div>
                 <br><br>
               </form>
+              <div id="message"></div>
             </div>
           </div>
         </div>
@@ -83,7 +84,7 @@
     </div>
 
   </div>
-
+  
   <!-- Core JS Files -->
   <script src="assets/js/core/jquery-3.7.1.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
@@ -107,7 +108,7 @@
   <script src="assets/js/kaiadmin.min.js"></script>
   <!-- Kaiadmin DEMO methods, don't include it in your project! -->
   <script src="assets/js/setting-demo.js"></script>
-  <script src="assets/js/demo.js"></script>
+  <script src = "login/loginScript.js"></script>
 </body>
 
 </html>
