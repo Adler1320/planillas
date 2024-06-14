@@ -81,14 +81,28 @@
                         <input type="file" class="form-control-file" id="exampleFormControlFile1" />
                       </div>
                     </div>
+                    <script>
+                      document.addEventListener('DOMContentLoaded', (event) => {
+                        const tel1Input = document.getElementById('tel1');
+                        const tel2Input = document.getElementById('tel2');
+
+                        function validateInput(event) {
+                          const value = event.target.value;
+                          event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
+                        }
+
+                        tel1Input.addEventListener('input', validateInput);
+                        tel2Input.addEventListener('input', validateInput);
+                      });
+                    </script>
                     <div class="col-md-6 col-lg-6">
                       <div class="form-group">
                         <label for="tel1">Telefono No. 1</label>
-                        <input type="tel1" class="form-control" id="tel1" placeholder="0000-0000" />
+                        <input type="number" class="form-control" id="tel1" placeholder="0000-0000" maxlength="8" />
                       </div>
                       <div class="form-group">
                         <label for="tel2">Telefono No. 2</label>
-                        <input type="tel2" class="form-control" id="tel2" placeholder="0000-0000" />
+                        <input type="number" class="form-control" id="tel2" placeholder="0000-0000" maxlength="8" />
                       </div>
 
                     </div>

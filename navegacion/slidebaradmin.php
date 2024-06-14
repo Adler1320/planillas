@@ -68,7 +68,7 @@
                     <div class="collapse" id="base">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="#">
+                                <a href="fichadeingreso.php">
                                     <span class="sub-item">Ficha de Ingreso</span>
                                 </a>
                             </li>
