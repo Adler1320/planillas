@@ -68,12 +68,12 @@
                     <div class="collapse" id="base">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="#">
+                                <a href="fichadeingreso.php">
                                     <span class="sub-item">Ficha de Ingreso</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="liquidaciones.php">
                                     <span class="sub-item">Liquidaciones</span>
                                 </a>
                             </li>
@@ -150,13 +150,18 @@
                     <div class="collapse" id="org">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="#">
+                                <a href="usuarios.php">
                                     <span class="sub-item">Usuarios</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <span class="sub-item">Puestos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Turnos</span>
                                 </a>
                             </li>
                         </ul>
