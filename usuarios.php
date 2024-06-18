@@ -55,152 +55,109 @@
           <div class="page-header">
             <h3 class="fw-bold mb-3">Usuarios del Sistema</h3>
           </div>
-          <div class="row">
-            <div class="col-md-8  ms-auto me-auto">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Agregar Usuario</div>
+
+
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="btn-label"><i class="fa fa-plus"></i></span>
+            Agregar Nuevo Usuario
+          </button>
+
+          <div class="modal" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Agregar Usuario</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-6 col-lg-10  ms-auto me-auto">
-                      <img src="assets/img/jm_denis.jpg" class="rounded mx-auto d-block" alt="...">
-                      <div class="form-group">
-                        <label for="namecompleto">Nombre</label>
-                        <input type="namecompleto" class="form-control" id="namecompleto"
-                          placeholder="Ingrese nombre completo" />
-                      </div>
 
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="user">Usuario</label>
-                            <input type="user" class="form-control" id="user"
-                              placeholder="Ingrese un nombre de usuario" />
+
+                <div class="row">
+                  <div class="col-md-12  ms-auto me-auto">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6 col-lg-10  ms-auto me-auto">
+                            <img src="assets/img/jm_denis.jpg" class="rounded mx-auto d-block" alt="...">
+                            <div class="form-group">
+                              <label for="namecompleto">Nombre</label>
+                              <input type="namecompleto" class="form-control" id="namecompleto"
+                                placeholder="Ingrese nombre completo" />
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="user">Usuario</label>
+                                  <input type="user" class="form-control" id="user" placeholder="Ingrese usuario" />
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="password">Contraseña</label>
+                                  <input type="password" class="form-control" id="password"
+                                    placeholder="Ingrese contraseña" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="user">Local</label>
+                              <div class="input-icon">
+                                <span class="input-icon-addon">
+                                  <i class="fas fa-store"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Seleccione un local" />
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Tipo de Usuario</label>
+                                  <select class="form-select" id="exampleFormControlSelect1">
+                                    <option>Administrador</option>
+                                    <option>Usuario</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Estatus</label>
+                                  <select class="form-select" id="exampleFormControlSelect1">
+                                    <option>Activo</option>
+                                    <option>Inactivo</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlFile1">Seleccione una Foto</label>
+                              <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                            </div>
                           </div>
                         </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password"
-                              placeholder="Ingrese una contraseña" />
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="form-group">
-                        <label for="user">Local</label>
-                        <div class="input-icon">
-                          <span class="input-icon-addon">
-                            <i class="fas fa-store"></i>
-                          </span>
-                          <input type="text" class="form-control" placeholder="Seleccione un local" />
-                        </div>
-                      </div>
-
-
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="exampleFormControlSelect1">Tipo de Usuario</label>
-                            <select class="form-select" id="exampleFormControlSelect1">
-                              <option>Administrador</option>
-                              <option>Usuario</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="exampleFormControlSelect1">Estatus</label>
-                            <select class="form-select" id="exampleFormControlSelect1">
-                              <option>Activo</option>
-                              <option>Inactivo</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlFile1">Seleccione una Foto</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card-action ms-auto me-auto">
-                  <button class="btn btn-success">Agregar Usuario</button>
+                <div class="modal-footer card-action ms-auto me-auto">
+                  <button type="button" class="btn btn-success">Agregar Usuario</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<!-- PARA AGREGAR USUARIOS AL Sistema -->
+        <!-- PARA AGREGAR USUARIOS AL Sistema -->
 
-<!-- TABLA PARA VER TODOS LOS USUARIOS -->
+        <!-- TABLA PARA VER TODOS LOS USUARIOS -->
         <div class="page-inner">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header">
                   <div class="d-flex align-items-center">
-                    <h4 class="card-title">Todos los usuarios del sistema</h4>
+                    <h4 class="card-title">Usuarios Registrados</h4>
                   </div>
                 </div>
                 <div class="card-body">
-                  <!--  
-                  <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header border-0">
-                          <h5 class="modal-title">
-                            <span class="fw-mediumbold"> New</span>
-                            <span class="fw-light"> Row </span>
-                          </h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <p class="small">
-                            Create a new row using this form, make sure you
-                            fill them all
-                          </p>
-                          <form>
-                            <div class="row">
-                              <div class="col-sm-12">
-                                <div class="form-group form-group-default">
-                                  <label>Name</label>
-                                  <input id="addName" type="text" class="form-control" placeholder="fill name" />
-                                </div>
-                              </div>
-                              <div class="col-md-6 pe-0">
-                                <div class="form-group form-group-default">
-                                  <label>Position</label>
-                                  <input id="addPosition" type="text" class="form-control"
-                                    placeholder="fill position" />
-                                </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="form-group form-group-default">
-                                  <label>Office</label>
-                                  <input id="addOffice" type="text" class="form-control" placeholder="fill office" />
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="modal-footer border-0">
-                          <button type="button" id="addRowButton" class="btn btn-primary">
-                            Add
-                          </button>
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div> -->
-
                   <div class="table-responsive">
                     <table id="add-row" class="display table table-striped table-hover">
                       <thead>
@@ -263,6 +220,7 @@
   <script src="assets/js/core/jquery-3.7.1.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
+
   <!-- jQuery Scrollbar -->
   <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
   <!-- Datatables -->

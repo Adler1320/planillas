@@ -53,69 +53,89 @@
         <div class="page-inner">
           <div class="page-header">
             <h3 class="fw-bold mb-3">Empresas</h3>
-            <ul class="breadcrumbs mb-3">
-              <li class="nav-home">
-              </li>
-
-            </ul>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Agregar Empresa</div>
+
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="btn-label"><i class="fa fa-plus"></i></span>
+            Agregar Nueva Empresa
+          </button>
+
+          <div class="modal" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">EMPRESAS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="name">Nombre de la Empresa</label>
-                        <input type="name" class="form-control" id="name" placeholder="Monte Alto XYZ" />
-                      </div>
-                      <div class="form-group">
-                        <label for="direccion">Direccion</label>
-                        <input type="direccion" class="form-control" id="direccion" placeholder="5ta. Calle 6-7" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlFile1">Logo de la Empresa</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-                      </div>
-                    </div>
-                    <script>
-                      document.addEventListener('DOMContentLoaded', (event) => {
-                        const tel1Input = document.getElementById('tel1');
-                        const tel2Input = document.getElementById('tel2');
+                <div class="row">
+                  <div class="col-md-12  ms-auto me-auto">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                              <div class="card-header">
+                                <div class="card-title">Agregar Empresa</div>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="name">Nombre de la Empresa</label>
+                                      <input type="name" class="form-control" id="name" placeholder="Monte Alto XYZ" />
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="direccion">Direccion</label>
+                                      <input type="direccion" class="form-control" id="direccion"
+                                        placeholder="5ta. Calle 6-7" />
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleFormControlFile1">Logo de la Empresa</label>
+                                      <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                                    </div>
+                                  </div>
+                                  <script>
+                                    document.addEventListener('DOMContentLoaded', (event) => {
+                                      const tel1Input = document.getElementById('tel1');
+                                      const tel2Input = document.getElementById('tel2');
 
-                        function validateInput(event) {
-                          const value = event.target.value;
-                          event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
-                        }
+                                      function validateInput(event) {
+                                        const value = event.target.value;
+                                        event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
+                                      }
 
-                        tel1Input.addEventListener('input', validateInput);
-                        tel2Input.addEventListener('input', validateInput);
-                      });
-                    </script>
-                    <div class="col-md-6 col-lg-6">
-                      <div class="form-group">
-                        <label for="tel1">Telefono No. 1</label>
-                        <input type="number" class="form-control" id="tel1" placeholder="0000-0000" maxlength="8" />
+                                      tel1Input.addEventListener('input', validateInput);
+                                      tel2Input.addEventListener('input', validateInput);
+                                    });
+                                  </script>
+                                  <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                      <label for="tel1">Telefono No. 1</label>
+                                      <input type="number" class="form-control" id="tel1" placeholder="0000-0000"
+                                        maxlength="8" />
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="tel2">Telefono No. 2</label>
+                                      <input type="number" class="form-control" id="tel2" placeholder="0000-0000"
+                                        maxlength="8" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="form-group">
-                        <label for="tel2">Telefono No. 2</label>
-                        <input type="number" class="form-control" id="tel2" placeholder="0000-0000" maxlength="8" />
-                      </div>
-
                     </div>
                   </div>
                 </div>
-                <div class="card-action d-flex justify-content-center">
-                  <button class="btn btn-success"> Guardar </button>
+                <div class="modal-footer card-action ms-auto me-auto">
+                  <button type="button" class="btn btn-success">Agregar Usuario</button>
                 </div>
               </div>
             </div>
           </div>
-          <h3 class="fw-bold mb-3">Empresas Registradas</h3>
-          <br>
+
+<div class="container">
+<br><br>
           <div class="row">
             <div class="col-md-4">
               <div class="card card-profile">
@@ -155,7 +175,7 @@
         </div>
       </div>
     </div>
-
+    </div>
 
     <!-- End Custom template -->
   </div>
