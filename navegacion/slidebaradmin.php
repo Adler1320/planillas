@@ -73,7 +73,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="liquidaciones.php">
                                     <span class="sub-item">Liquidaciones</span>
                                 </a>
                             </li>
