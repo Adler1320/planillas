@@ -69,145 +69,112 @@
                   <h5 class="modal-title">Agregar Usuario</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form action="tablas/insertarusuario.php" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="col-md-12  ms-auto me-auto">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-10  ms-auto me-auto">
+                              <img src="assets/img/fotodeperfil/profile_default.jpg" class="rounded mx-auto d-block"
+                                alt="...">
+                              <div class="form-group">
+                                <label for="namecompleto">Nombre</label>
+                                <input type="text" class="form-control" id="namecompleto" name="namecompleto"
+                                  placeholder="Ingrese nombre completo" />
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="user">Usuario</label>
+                                    <input type="text" class="form-control" id="user" name="user"
+                                      placeholder="Ingrese usuario" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="password">Contraseña</label>
+                                    <input type="text" class="form-control" id="password" name="password"
+                                      placeholder="Ingrese contraseña" />
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="local">Local</label>
+                                <select class="form-select" id="local-select" name="local">
+                                  <?php
+                                  include_once 'tablas/traerlocales.php';
+                                  ?>
+                                </select>
+                                <!-- Campo oculto para el id del local -->
+                                <input type="hidden" id="idLocal" name="idLocal" value="">
+                              </div>
 
+                              <script>
+                                
+                                  document.addEventListener('DOMContentLoaded', function () {
+                                    // Seleccionar el primer elemento
+                                    var selectElement = document.getElementById('local-select');
+                                    var firstOption = selectElement.options[0];
 
-                <div class="row">
-                  <div class="col-md-12  ms-auto me-auto">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-6 col-lg-10  ms-auto me-auto">
-                            <img src="assets/img/jm_denis.jpg" class="rounded mx-auto d-block" alt="...">
-                            <div class="form-group">
-                              <label for="namecompleto">Nombre</label>
-                              <input type="namecompleto" class="form-control" id="namecompleto"
-                                placeholder="Ingrese nombre completo" />
-                            </div>
+                                    // Asignar el valor del ID al input oculto
+                                    document.getElementById('idLocal').value = firstOption.getAttribute('data-id');
 
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="form-group">
-                                  <label for="user">Usuario</label>
-                                  <input type="user" class="form-control" id="user" placeholder="Ingrese usuario" />
+                                    // Agregar el evento de cambio
+                                    selectElement.addEventListener('change', function () {
+                                      var selectedOption = selectElement.options[selectElement.selectedIndex];
+                                      document.getElementById('idLocal').value = selectedOption.getAttribute('data-id');
+                                    });
+                                  });
+                              </script>
+
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="tipo_usuario">Tipo de Usuario</label>
+                                    <select class="form-select" id="tipo_usuario" name="tipo_usuario">
+                                      <option value="Administrador">Administrador</option>
+                                      <option value="Usuario">Usuario</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label for="estatus">Estatus</label>
+                                    <select class="form-select" id="estatus" name="estatus">
+                                      <option value="Activo">Activo</option>
+                                      <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="col-md-6">
-                                <div class="form-group">
-                                  <label for="password">Contraseña</label>
-                                  <input type="password" class="form-control" id="password"
-                                    placeholder="Ingrese contraseña" />
-                                </div>
+                              <div class="form-group">
+                                <label for="foto_perfil">Seleccione una Foto</label>
+                                <input type="file" class="form-control-file" id="foto_perfil" name="foto_perfil" />
                               </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="user">Local</label>
-                              <div class="input-icon">
-                                <span class="input-icon-addon">
-                                  <i class="fas fa-store"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Seleccione un local" />
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="form-group">
-                                  <label for="exampleFormControlSelect1">Tipo de Usuario</label>
-                                  <select class="form-select" id="exampleFormControlSelect1">
-                                    <option>Administrador</option>
-                                    <option>Usuario</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="form-group">
-                                  <label for="exampleFormControlSelect1">Estatus</label>
-                                  <select class="form-select" id="exampleFormControlSelect1">
-                                    <option>Activo</option>
-                                    <option>Inactivo</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleFormControlFile1">Seleccione una Foto</label>
-                              <input type="file" class="form-control-file" id="exampleFormControlFile1" />
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="modal-footer card-action ms-auto me-auto">
-                  <button type="button" class="btn btn-success">Agregar Usuario</button>
-                </div>
+                  <div class="modal-footer card-action ms-auto me-auto">
+                    <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                  </div>
+                </form>
+
               </div>
             </div>
           </div>
+
         </div>
         <!-- PARA AGREGAR USUARIOS AL Sistema -->
 
         <!-- TABLA PARA VER TODOS LOS USUARIOS -->
-        <div class="page-inner">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="d-flex align-items-center">
-                    <h4 class="card-title">Usuarios Registrados</h4>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table id="add-row" class="display table table-striped table-hover">
-                      <thead>
-                        <tr>
-                          <th>Nombre</th>
-                          <th>Usuario</th>
-                          <th>Local</th>
-                          <th>Tipo de Usuario</th>
-                          <th>Estatus</th>
-                          <th style="width: 10%">Acción</th>
-                        </tr>
-                      </thead>
-                      <tfoot>
-                        <tr>
-                          <th>Nombre</th>
-                          <th>Usuario</th>
-                          <th>Local</th>
-                          <th>Tipo de Usuario</th>
-                          <th>Estatus</th>
-                          <th>Acción</th>
-                        </tr>
-                      </tfoot>
-                      <tbody>
-                        <tr>
-                          <td>Adler Abdiel Ramos Merida</td>
-                          <td>aramosm</td>
-                          <td>Monte Alto Cambote</td>
-                          <td>Administrador</td>
-                          <td>Activo</td>
-                          <td>
-                            <div class="form-button-action">
-                              <button type="button" data-bs-toggle="tooltip" title=""
-                                class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                <i class="fa fa-edit"></i>
-                              </button>
-                              <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                data-original-title="Remove">
-                                <i class="fa fa-times"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
+        // Incluye el archivo 'header.php' solo una vez
+        include_once 'tablas/tbusuarios.php';
+        ?>
         <!-- TABLA PARA VER TODOS LOS USUARIOS -->
 
 
