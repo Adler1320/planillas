@@ -308,6 +308,122 @@
                               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                 aria-labelledby="v-pills-messages-tab">
                                 <!-- FICHA DE INGRESO -->
+
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-md-6 col-lg-6">
+
+                                      <div class="form-group">
+                                        <label for="nacimiento">Sueldo Base</label>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text">Q.</span>
+                                          <input type="number" class="form-control" id="sueldobase"
+                                            aria-label="Amount (to the nearest dollar)" placeholder="3500.00" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="nacimiento">Bonificaciones</label>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text">Q.</span>
+                                          <input type="number" class="form-control" id="bonificaciones"
+                                            aria-label="Amount (to the nearest dollar)" placeholder="500.00" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="nacimiento">Fecha de Contratacion</label>
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fa fa-user"></i></span>
+                                          <input type="date" class="form-control" id="fechacontratacion" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="user">Local</label>
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon">
+                                            <i class="fas fa-store"></i>
+                                          </span>
+                                          <input type="text" class="form-control" placeholder="Seleccione un local"
+                                            id="local" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>¿IGSS?</label><br />
+                                        <div class="d-flex">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                              id="flexRadioDefault3" />
+                                            <label class="form-check-label" for="flexRadioDefault3">
+                                              SI
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                              id="flexRadioDefault4" checked />
+                                            <label class="form-check-label" for="flexRadioDefault4">
+                                              NO
+                                            </label>
+                                          </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <input type="text" class="form-control " id="igss"
+                                            placeholder="Numero de Afiliacion" disabled />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="nacimiento">Monto IGSS</label>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text">Q.</span>
+                                          <input type="number" class="form-control"
+                                            aria-label="Amount (to the nearest dollar)" placeholder="155.00"
+                                            id="montoigss" />
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fas fa-clock"></i></span>
+                                          <input type="text" class="form-control" id="turno" placeholder="Turno" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fas fa-hot-tub"></i></span>
+                                          <input type="text" class="form-control" id="puesto" placeholder="Puesto" />
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+
+                                    <div class="col-md-6 col-lg-6">
+                                      <div class="form-group">
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fas fa-tablet-alt"></i></span>
+                                          <input type="text" class="form-control" id="celular"
+                                            placeholder="Ingrese Numero de Celular" maxlength="8" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fas fa-users"></i></span>
+                                          <input type="text" class="form-control" id="parentezco"
+                                            placeholder="Parentezco con el Empleado" />
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <button class="btn btn-black">
+                                          <span class="btn-label">
+                                            <i class="fa fa-archive"></i>
+                                          </span>
+                                          Agregar Referencia del Empleado
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -340,7 +456,7 @@
           .form-button-action .btn {
             margin-right: 5px;
           }
-          
+
 
           .form-button-action .btn:last-child {
             margin-right: 0;
