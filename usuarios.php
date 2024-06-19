@@ -111,21 +111,21 @@
                               </div>
 
                               <script>
-                                
-                                  document.addEventListener('DOMContentLoaded', function () {
-                                    // Seleccionar el primer elemento
-                                    var selectElement = document.getElementById('local-select');
-                                    var firstOption = selectElement.options[0];
 
-                                    // Asignar el valor del ID al input oculto
-                                    document.getElementById('idLocal').value = firstOption.getAttribute('data-id');
+                                document.addEventListener('DOMContentLoaded', function () {
+                                  // Seleccionar el primer elemento
+                                  var selectElement = document.getElementById('local-select');
+                                  var firstOption = selectElement.options[0];
 
-                                    // Agregar el evento de cambio
-                                    selectElement.addEventListener('change', function () {
-                                      var selectedOption = selectElement.options[selectElement.selectedIndex];
-                                      document.getElementById('idLocal').value = selectedOption.getAttribute('data-id');
-                                    });
+                                  // Asignar el valor del ID al input oculto
+                                  document.getElementById('idLocal').value = firstOption.getAttribute('data-id');
+
+                                  // Agregar el evento de cambio
+                                  selectElement.addEventListener('change', function () {
+                                    var selectedOption = selectElement.options[selectElement.selectedIndex];
+                                    document.getElementById('idLocal').value = selectedOption.getAttribute('data-id');
                                   });
+                                });
                               </script>
 
                               <div class="row">
@@ -142,8 +142,8 @@
                                   <div class="form-group">
                                     <label for="estatus">Estatus</label>
                                     <select class="form-select" id="estatus" name="estatus">
-                                      <option value="Activo">Activo</option>
-                                      <option value="Inactivo">Inactivo</option>
+                                      <option value="Activo">ACTIVO</option>
+                                      <option value="Inactivo">INACTIVO</option>
                                     </select>
                                   </div>
                                 </div>
@@ -159,10 +159,10 @@
                     </div>
                   </div>
                   <div class="modal-footer card-action ms-auto me-auto">
-                    <button type="submit" class="btn btn-success">Agregar Usuario</button>
+                    <button type="submit" class="btn btn-success ">Agregar Usuario</button>
                   </div>
                 </form>
-
+                
               </div>
             </div>
           </div>
@@ -183,11 +183,14 @@
 
 
   </div>
+  <!-- Meta tags, CSS links -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery-3.7.1.min.js"></script>
   <script src="assets/js/core/popper.min.js"></script>
   <script src="assets/js/core/bootstrap.min.js"></script>
-
+  <script src="assets/js/alertas.js"></script>
   <!-- jQuery Scrollbar -->
   <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
   <!-- Datatables -->

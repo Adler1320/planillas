@@ -60,121 +60,117 @@
             Agregar Nueva Empresa
           </button>
 
-          <div class="modal" id="exampleModal" tabindex="-1">
+          <!-- Modal para agregar/editar empresa -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">EMPRESAS</h5>
+                  <h5 class="modal-title" id="modalTitle">EMPRESAS</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="row">
-                  <div class="col-md-12  ms-auto me-auto">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-12">
+                <form id="empresaForm" action="insertarlocales.php" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="col-md-12 ms-auto me-auto">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-12">
                               <div class="card-header">
-                                <div class="card-title">Agregar Empresa</div>
+                                <div class="card-title" id="modalTitle">Agregar Empresa</div>
                               </div>
                               <div class="card-body">
                                 <div class="row">
                                   <div class="col-md-6 col-lg-6">
                                     <div class="form-group">
                                       <label for="name">Nombre de la Empresa</label>
-                                      <input type="name" class="form-control" id="name" placeholder="Monte Alto XYZ" />
+                                      <input type="text" class="form-control" name="nombre" id="name"
+                                        placeholder="Monte Alto XYZ" required />
                                     </div>
                                     <div class="form-group">
                                       <label for="direccion">Direccion</label>
-                                      <input type="direccion" class="form-control" id="direccion"
-                                        placeholder="5ta. Calle 6-7" />
+                                      <input type="text" class="form-control" name="direccion" id="direccion"
+                                        placeholder="5ta. Calle 6-7" required />
                                     </div>
                                     <div class="form-group">
-                                      <label for="exampleFormControlFile1">Logo de la Empresa</label>
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1" />
+                                      <label for="logo">Logo de la Empresa</label>
+                                      <input type="file" class="form-control-file" name="logo" id="logo" />
                                     </div>
                                   </div>
-                                  <script>
-                                    document.addEventListener('DOMContentLoaded', (event) => {
-                                      const tel1Input = document.getElementById('tel1');
-                                      const tel2Input = document.getElementById('tel2');
-
-                                      function validateInput(event) {
-                                        const value = event.target.value;
-                                        event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
-                                      }
-
-                                      tel1Input.addEventListener('input', validateInput);
-                                      tel2Input.addEventListener('input', validateInput);
-                                    });
-                                  </script>
                                   <div class="col-md-6 col-lg-6">
                                     <div class="form-group">
                                       <label for="tel1">Telefono No. 1</label>
-                                      <input type="number" class="form-control" id="tel1" placeholder="0000-0000"
-                                        maxlength="8" />
+                                      <input type="text" class="form-control" name="telefono1" id="tel1"
+                                        placeholder="0000-0000" maxlength="8" required />
                                     </div>
                                     <div class="form-group">
                                       <label for="tel2">Telefono No. 2</label>
-                                      <input type="number" class="form-control" id="tel2" placeholder="0000-0000"
-                                        maxlength="8" />
+                                      <input type="text" class="form-control" name="telefono2" id="tel2"
+                                        placeholder="0000-0000" maxlength="8" required />
                                     </div>
                                   </div>
                                 </div>
+                                <input type="hidden" name="idLocal" id="idLocal" value="" />
                               </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="modal-footer card-action ms-auto me-auto">
-                  <button type="button" class="btn btn-success">Agregar Usuario</button>
-                </div>
+                  <div class="modal-footer card-action ms-auto me-auto">
+                    <button type="submit" class="btn btn-success">Guardar Empresa</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
 
-<div class="container">
-<br><br>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card card-profile">
-                <div class="card-header" style="background-image: url('assets/img/portada.avif')">
-                  <div class="profile-picture">
-                    <div class="avatar avatar-xl">
-                      <img src="assets/img/montealto.png" alt="..." class="avatar-img rounded-circle" />
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="user-profile text-center">
-                    <div class="name">Monte Alto Cambote</div>
-                    <div class="job">Cambote Zona 11</div><br>
-                    <div class="desc">0000-0000</div>
-                    <div class="desc">0000-0000</div>
-                    <div class="view-profile">
-                      <a href="#" class="btn btn-secondary w-100">Editar Empresa</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="row user-stats text-center">
-                    <div class="col">
-                      <div class="number">125</div>
-                      <div class="title">Empleados</div>
-                    </div>
-                    <div class="col">
-                      <div class="number">25K</div>
-                      <div class="title">IGSS</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <script>
+            function editEmpresa(id) {
+              $.get('getLocalData.php', { id: id }, function (data) {
+                var empresa = JSON.parse(data);
+                if (empresa.error) {
+                  alert(empresa.error);
+                } else {
+                  $('#modalTitle').text('Editar Empresa');
+                  $('#name').val(empresa.nombrelocal);
+                  $('#direccion').val(empresa.direccionlocal);
+                  $('#tel1').val(empresa.telefono);
+                  $('#tel2').val(empresa.telefono2);
+                  $('#idLocal').val(empresa.idLocal);
+
+                  // Eliminar el campo de archivo si no se desea cambiar el logo
+                  $('#logo').prop('required', false);
+
+                  // Mostrar el modal
+                  $('#exampleModal').modal('show');
+                }
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+              const tel1Input = document.getElementById('tel1');
+              const tel2Input = document.getElementById('tel2');
+
+              function validateInput(event) {
+                const value = event.target.value;
+                event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
+              }
+
+              tel1Input.addEventListener('input', validateInput);
+              tel2Input.addEventListener('input', validateInput);
+            });
+          </script>
+
+
+
+          <?php
+          // Incluye el archivo 'header.php' solo una vez
+          include_once 'tablas/traerempresas.php';
+          ?>
         </div>
       </div>
-    </div>
     </div>
 
     <!-- End Custom template -->
@@ -238,6 +234,42 @@
       lineWidth: "2",
       lineColor: "#ffa534",
       fillColor: "rgba(255, 165, 52, .14)",
+    });
+  </script>
+  <script>
+    function editEmpresa(id) {
+      $.get('getLocalData.php', { id: id }, function (data) {
+        var empresa = JSON.parse(data);
+        if (empresa.error) {
+          alert(empresa.error);
+        } else {
+          $('#modalTitle').text('Editar Empresa');
+          $('#name').val(empresa.nombrelocal);
+          $('#direccion').val(empresa.direccionlocal);
+          $('#tel1').val(empresa.telefono);
+          $('#tel2').val(empresa.telefono2);
+          $('#idLocal').val(empresa.idLocal);
+
+          // Eliminar el campo de archivo si no se desea cambiar el logo
+          $('#logo').prop('required', false);
+
+          // Mostrar el modal
+          $('#exampleModal').modal('show');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const tel1Input = document.getElementById('tel1');
+      const tel2Input = document.getElementById('tel2');
+
+      function validateInput(event) {
+        const value = event.target.value;
+        event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
+      }
+
+      tel1Input.addEventListener('input', validateInput);
+      tel2Input.addEventListener('input', validateInput);
     });
   </script>
 </body>

@@ -61,7 +61,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6 col-lg-10  ms-auto me-auto">
-                      <img src="assets/img/jm_denis.jpg" class="rounded mx-auto d-block" alt="...">
+                      <img src="assets/img/fotodeperfil/profile_default.jpg" class="rounded mx-auto d-block" alt="...">
                       <div class="form-group">
                         <label for="namecompleto">Nombre</label>
                         <input type="namecompleto" class="form-control" id="namecompleto"

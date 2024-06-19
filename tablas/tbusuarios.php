@@ -64,19 +64,22 @@ $result = $conn->query($sql);
                                         echo "<td>" . $row["username"] . "</td>";
                                         echo "<td>" . $row["nombrelocal"] . "</td>";
                                         echo "<td>" . $row["tipodeusuario"] . "</td>";
-                                        echo "<td> <span class='badge badge-danger'> " . $row["estado"] . "</span> </td>";                                   
+
+                                        // Verificar el estado y asignar la clase adecuada
+                                        $badgeClass = $row["estado"] == "ACTIVO" ? "badge badge-success" : "badge badge-danger";
+                                        echo "<td> <span class='$badgeClass'>" . $row["estado"] . "</span> </td>";
+
                                         echo '<td>
-                                                <div class="form-button-action">
-                                                    <button type="button" data-bs-toggle="tooltip" title=""
+                                                  <div class="form-button-action">
+                                                      <button type="button" data-bs-toggle="tooltip" title=""
                                                         class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                                        <i class="fa fa-edit"></i>
-                                                    </button>
-                                                    <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
-                                                        data-original-title="Remove">
-                                                        <i class="fa fa-times"></i>
-                                                    </button>
-                                                </div>
-                                            </td>';
+                                                         <i class="fa fa-edit"></i> </button>
+                                                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                                                           data-original-title="Remove">
+                                                         <i class="fa fa-times"></i>
+                                                      </button>
+                                                    </div>
+                                             </td>';
                                         echo "</tr>";
                                     }
                                 } else {
@@ -85,6 +88,7 @@ $result = $conn->query($sql);
                                 $conn->close();
                                 ?>
                             </tbody>
+
                         </table>
                     </div>
                 </div>

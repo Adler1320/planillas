@@ -225,13 +225,13 @@
                     </div>
                 </li>
 
-                <li class="nav-item topbar-user dropdown hidden-caret">
+                <li class="nav-item topbar-user dropdown hidden-caret ">
                     <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                         <div class="avatar-sm">
                             <img src="assets/img/fotodeperfil/profile_default.jpg" alt="..." class="avatar-img rounded-circle" />
                         </div>
-                        <span class="profile-username">
-                            <span class="op-7">Hola,</span>
+                        <span class="profile-username ">
+                            <span class="op-7" >Hola,</span>
                             <span class="fw-bold">Adler</span>
                         </span>
                     </a>
@@ -243,13 +243,17 @@
                                         <img src="assets/img/jm_denis.jpg" alt="image profile"
                                             class="avatar-img rounded" />
                                     </div>
-                                    <div class="u-text">
+                                    <div class="u-text ms-auto me-auto">
                                         <h4>Adler Ramos</h4>
+
                                         <p class="text-muted">Adler@example.com</p>
-                                        <a href="perfil.php" class="btn btn-xs btn-secondary btn-sm">Ver Perfil</a>
+
+
+                                    <a href="perfil.php" class="btn btn-xs btn-secondary btn-sm">Ver Perfil</a>
                                     </div>
                                 </div>
                             </li>
+
                             <li>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item fw-bold" href="#">Cerrar Sesión</a>
