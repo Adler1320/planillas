@@ -46,10 +46,10 @@
 
     <div class="main-panel">
 
-    <?php
-    // Incluye el archivo 'header.php' solo una vez
-    include_once 'navegacion/navbar.php';
-    ?>    
+      <?php
+      // Incluye el archivo 'header.php' solo una vez
+      include_once 'navegacion/navbar.php';
+      ?>
 
       <div class="container">
         <div class="page-inner">
@@ -57,7 +57,7 @@
             <div>
               <h3 class="fw-bold mb-3">Dashboard</h3>
             </div>
-            
+
           </div>
           <div class="row">
             <div class="col-sm-6 col-md-4">
@@ -98,6 +98,12 @@
                 </div>
               </div>
             </div>
+
+            <?php
+            //Incluir el archivo de conexión
+            include 'tablas/datosdashboard.php';
+            ?>
+            
             <div class="col-sm-6 col-md-4">
               <div class="card card-stats card-round">
                 <div class="card-body">
@@ -110,13 +116,14 @@
                     <div class="col col-stats ms-3 ms-sm-0">
                       <div class="numbers">
                         <p class="card-category">Empresas</p>
-                        <h4 class="card-title">10</h4>
+                        <h4 class="card-title"><?php echo $total_locales; ?></h4>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

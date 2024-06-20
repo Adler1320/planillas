@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Manejo de la foto de perfil
     if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] == 0) {
-        $foto_perfil = 'fotodeperfil/' . basename($_FILES['foto_perfil']['name']);
+        $foto_perfil = '../assets/img/fotodeperfil/' . basename($_FILES['foto_perfil']['name']);
         if (!move_uploaded_file($_FILES['foto_perfil']['tmp_name'], $foto_perfil)) {
             echo "Error al mover el archivo de la foto de perfil.";
             exit;
         }
     } else {
-        $foto_perfil = 'fotodeperfil/profile_default.jpg'; // Foto de perfil por defecto
+        $foto_perfil = '../assets/img/fotodeperfil/profile_default.jpg'; // Foto de perfil por defecto
     }
 
     // Insertar los datos en la base de datos

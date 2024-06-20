@@ -57,7 +57,7 @@
                               aria-orientation="vertical">
                               <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                                 href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Datos
-                                personales</a>
+                                Personales</a>
                               <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile"
                                 role="tab" aria-controls="v-pills-profile" aria-selected="false">Referencias</a>
                               <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
@@ -394,16 +394,8 @@
                                       </div>
                                     </div>
 
-
-
                                     <div class="col-md-6 col-lg-6">
-                                      <div class="form-group">
-                                        <div class="input-icon">
-                                          <span class="input-icon-addon"><i class="fas fa-tablet-alt"></i></span>
-                                          <input type="text" class="form-control" id="celular"
-                                            placeholder="Ingrese Numero de Celular" maxlength="8" />
-                                        </div>
-                                      </div>
+                                      
                                       <div class="form-group">
                                         <div class="input-icon">
                                           <span class="input-icon-addon"><i class="fas fa-users"></i></span>

@@ -75,7 +75,7 @@
                       <div class="card">
                         <div class="card-body">
                           <div class="row">
-                            <div class="col-md-6 col-lg-10  ms-auto me-auto">
+                            <div class="col-md-10 col-lg-10  ms-auto me-auto">
                               <img src="assets/img/fotodeperfil/profile_default.jpg" class="rounded mx-auto d-block"
                                 alt="...">
                               <div class="form-group">
