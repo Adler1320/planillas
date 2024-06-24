@@ -155,12 +155,12 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="puestos.php">
                                     <span class="sub-item">Puestos</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="turnos.php">
                                     <span class="sub-item">Turnos</span>
                                 </a>
                             </li>

@@ -64,6 +64,27 @@
                                 href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
                                 aria-selected="false">Ficha de Ingreso</a>
                             </div>
+
+                            <br>
+
+                            <div class="card card-post card-round">
+                              <img class="card-img-top" src="assets/img/fotodeperfil/profile.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <div class="d-flex">
+
+                                  <div class="info-post">
+                                    <p class="username">Subir Foto</p>
+                                    <div class="form-group">
+
+                                      <input type="file" class="form-control-file" id="exampleFormControlFile2" />
+
+                                  
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
                           </div>
                           <div class="col-7 col-md-8">
                             <div class="tab-content" id="v-pills-tabContent">
@@ -315,7 +336,7 @@
 
                                       <div class="form-group">
                                         <label for="nacimiento">Sueldo Base</label>
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                           <span class="input-group-text">Q.</span>
                                           <input type="number" class="form-control" id="sueldobase"
                                             aria-label="Amount (to the nearest dollar)" placeholder="3500.00" />
@@ -323,7 +344,7 @@
                                       </div>
                                       <div class="form-group">
                                         <label for="nacimiento">Bonificaciones</label>
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                           <span class="input-group-text">Q.</span>
                                           <input type="number" class="form-control" id="bonificaciones"
                                             aria-label="Amount (to the nearest dollar)" placeholder="500.00" />
@@ -369,65 +390,95 @@
                                           <input type="text" class="form-control " id="igss"
                                             placeholder="Numero de Afiliacion" disabled />
                                         </div>
+
                                       </div>
                                       <div class="form-group">
                                         <label for="nacimiento">Monto IGSS</label>
-                                        <div class="input-group mb-3">
+                                        <div class="input-group ">
                                           <span class="input-group-text">Q.</span>
                                           <input type="number" class="form-control"
                                             aria-label="Amount (to the nearest dollar)" placeholder="155.00"
                                             id="montoigss" />
                                         </div>
                                       </div>
-
+                                    </div>
+                                    <div class="col-md-6 col-lg-6">
                                       <div class="form-group">
+                                        <label for="Turno">Turno</label>
                                         <div class="input-icon">
                                           <span class="input-icon-addon"><i class="fas fa-clock"></i></span>
                                           <input type="text" class="form-control" id="turno" placeholder="Turno" />
                                         </div>
                                       </div>
                                       <div class="form-group">
+                                        <label for="Puesto">Puesto</label>
                                         <div class="input-icon">
                                           <span class="input-icon-addon"><i class="fas fa-hot-tub"></i></span>
                                           <input type="text" class="form-control" id="puesto" placeholder="Puesto" />
                                         </div>
                                       </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-6">
-                                      
                                       <div class="form-group">
+                                        <label for="observaciones">Observaciones</label>
                                         <div class="input-icon">
-                                          <span class="input-icon-addon"><i class="fas fa-users"></i></span>
-                                          <input type="text" class="form-control" id="parentezco"
-                                            placeholder="Parentezco con el Empleado" />
+                                          <span class="input-icon-addon"><i class="fas fa-clipboard"></i></span>
+                                          <input type="text" class="form-control" id="apellidos"
+                                            placeholder="Observaciones" />
                                         </div>
                                       </div>
-
+                                      <label>Asignar a planilla actual?</label><br />
+                                      <div class="d-flex">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault5" />
+                                          <label class="form-check-label" for="flexRadioDefault5">
+                                            SI
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault6" checked />
+                                          <label class="form-check-label" for="flexRadioDefault6">
+                                            NO
+                                          </label>
+                                        </div>
+                                      </div>
                                       <div class="form-group">
-                                        <button class="btn btn-black">
-                                          <span class="btn-label">
-                                            <i class="fa fa-archive"></i>
-                                          </span>
-                                          Agregar Referencia del Empleado
-                                        </button>
+                                        <label for="observaciones">Días de Trabajo</label>
+                                        <div class="input-icon">
+                                          <span class="input-icon-addon"><i class="fas fa-dolly"></i></span>
+                                          <input type="text" class="form-control" id="apellidos" placeholder="00" />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="nacimiento">Total a Descontar</label>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text">Q.</span>
+                                          <input type="number" class="form-control" id="sueldobase"
+                                            aria-label="Amount (to the nearest dollar)" placeholder="0000.00"
+                                            disabled />
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="nacimiento">Sueldo a Recibir</label>
+                                        <div class="input-group">
+                                          <span class="input-group-text">Q.</span>
+                                          <input type="number" class="form-control" id="bonificaciones"
+                                            aria-label="Amount (to the nearest dollar)" placeholder="0000.00"
+                                            disabled />
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-
                                 </div>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </div>
                       <br>
                     </div>
                   </div>
-
                 </div>
-
                 <div class="modal-footer card-action ms-auto me-auto">
                   <button type="button" class="btn btn-success">Agregar Usuario</button>
                 </div>
@@ -549,26 +600,7 @@
   <script src="assets/js/kaiadmin.min.js"></script>
   <!-- Kaiadmin DEMO methods, don't include it in your project! -->
   <script src="assets/js/setting-demo2.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const siRadio = document.getElementById('flexRadioDefault1');
-      const noRadio = document.getElementById('flexRadioDefault2');
-      const cuantosHijosInput = document.getElementById('cuantoshijos');
-
-      siRadio.addEventListener('change', function () {
-        if (siRadio.checked) {
-          cuantosHijosInput.disabled = false;
-        }
-      });
-
-      noRadio.addEventListener('change', function () {
-        if (noRadio.checked) {
-          cuantosHijosInput.disabled = true;
-          cuantosHijosInput.value = ''; // Opcional: Limpiar el campo cuando se desactiva
-        }
-      });
-    });
-  </script>
+  <script src="assets/js/flexradio.js"></script>
   <script>
     $(document).ready(function () {
       $("#basic-datatables").DataTable({});
