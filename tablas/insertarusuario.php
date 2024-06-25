@@ -26,13 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $foto_perfil = '../assets/img/fotodeperfil/profile_default.jpg'; // Foto de perfil por defecto
     }
-
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Insertar los datos en la base de datos
     $sql = "INSERT INTO usuario (Nombre, username, pass, id_Local, tipodeusuario, estado, foto_perfil) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
-        $stmt->bind_param('sssssss', $nombre, $usuario, $password, $local, $tipo_usuario, $estatus, $foto_perfil);
+        $stmt->bind_param('sssssss', $nombre, $usuario, $hashed_password, $local, $tipo_usuario, $estatus, $foto_perfil);
 
         if ($stmt->execute()) {
            // recargar la pagina   

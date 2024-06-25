@@ -2,7 +2,7 @@
 $host = 'localhost'; // Nombre del servidor de la base de datos
 $dbname = 'bdplanillas'; // Nombre de la base de datos
 $username = 'root'; // Nombre de usuario de MySQL
-$password = ''; // Contraseña de MySQL
+$password = 'pass'; // Contraseña de MySQL
 
 // Crear conexión
 $conn = new mysqli($host, $username, $password, $dbname);

@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Consulta para obtener el hash de la contraseña del usuario
-    $sql = "SELECT idUsuario, username, pass FROM Usuario WHERE username = ?";
+    $sql = "SELECT idUsuario, username, pass FROM usuario WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $pass = $row['pass'];
-        //if (password_verify($password, $pass)) {
-        if($password === $pass){
+        if (password_verify($password, $pass)) {
+       // if($password === $pass){
             // Login exitoso, guardar datos en la sesión
             $_SESSION['user_id'] = $row['idUsuario'];
             $_SESSION['username'] = $row['username'];
