@@ -9,23 +9,7 @@
   <link rel="icon" href="assets/img/nomina.ico" type="image/x-icon" />
   <!-- Fonts and icons -->
   <script src="assets/js/plugin/webfont/webfont.min.js"></script>
-  <script>
-    WebFont.load({
-      google: { families: ["Public Sans:300,400,500,600,700"] },
-      custom: {
-        families: [
-          "Font Awesome 5 Solid",
-          "Font Awesome 5 Regular",
-          "Font Awesome 5 Brands",
-          "simple-line-icons",
-        ],
-        urls: ["assets/css/fonts.min.css"],
-      },
-      active: function () {
-        sessionStorage.fonts = true;
-      },
-    });
-  </script>
+  <script src="assets/js/font.js"></script>
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -126,44 +110,6 @@
             </div>
           </div>
 
-          <script>
-            function editEmpresa(id) {
-              $.get('getLocalData.php', { id: id }, function (data) {
-                var empresa = JSON.parse(data);
-                if (empresa.error) {
-                  alert(empresa.error);
-                } else {
-                  $('#modalTitle').text('Editar Empresa');
-                  $('#name').val(empresa.nombrelocal);
-                  $('#direccion').val(empresa.direccionlocal);
-                  $('#tel1').val(empresa.telefono);
-                  $('#tel2').val(empresa.telefono2);
-                  $('#idLocal').val(empresa.idLocal);
-
-                  // Eliminar el campo de archivo si no se desea cambiar el logo
-                  $('#logo').prop('required', false);
-
-                  // Mostrar el modal
-                  $('#exampleModal').modal('show');
-                }
-              });
-            }
-
-            document.addEventListener('DOMContentLoaded', (event) => {
-              const tel1Input = document.getElementById('tel1');
-              const tel2Input = document.getElementById('tel2');
-
-              function validateInput(event) {
-                const value = event.target.value;
-                event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
-              }
-
-              tel1Input.addEventListener('input', validateInput);
-              tel2Input.addEventListener('input', validateInput);
-            });
-          </script>
-
-
 
           <?php
           // Incluye el archivo 'header.php' solo una vez
@@ -208,70 +154,8 @@
   <!-- Kaiadmin DEMO methods, don't include it in your project! -->
   <script src="assets/js/setting-demo.js"></script>
   <script src="assets/js/demo.js"></script>
-  <script>
-    $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-      type: "line",
-      height: "70",
-      width: "100%",
-      lineWidth: "2",
-      lineColor: "#177dff",
-      fillColor: "rgba(23, 125, 255, 0.14)",
-    });
+ 
 
-    $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-      type: "line",
-      height: "70",
-      width: "100%",
-      lineWidth: "2",
-      lineColor: "#f3545d",
-      fillColor: "rgba(243, 84, 93, .14)",
-    });
-
-    $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-      type: "line",
-      height: "70",
-      width: "100%",
-      lineWidth: "2",
-      lineColor: "#ffa534",
-      fillColor: "rgba(255, 165, 52, .14)",
-    });
-  </script>
-  <script>
-    function editEmpresa(id) {
-      $.get('getLocalData.php', { id: id }, function (data) {
-        var empresa = JSON.parse(data);
-        if (empresa.error) {
-          alert(empresa.error);
-        } else {
-          $('#modalTitle').text('Editar Empresa');
-          $('#name').val(empresa.nombrelocal);
-          $('#direccion').val(empresa.direccionlocal);
-          $('#tel1').val(empresa.telefono);
-          $('#tel2').val(empresa.telefono2);
-          $('#idLocal').val(empresa.idLocal);
-
-          // Eliminar el campo de archivo si no se desea cambiar el logo
-          $('#logo').prop('required', false);
-
-          // Mostrar el modal
-          $('#exampleModal').modal('show');
-        }
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const tel1Input = document.getElementById('tel1');
-      const tel2Input = document.getElementById('tel2');
-
-      function validateInput(event) {
-        const value = event.target.value;
-        event.target.value = value.replace(/[^0-9]/g, '').slice(0, 8);
-      }
-
-      tel1Input.addEventListener('input', validateInput);
-      tel2Input.addEventListener('input', validateInput);
-    });
-  </script>
 </body>
 
 </html>
