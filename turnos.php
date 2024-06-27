@@ -2,7 +2,22 @@
 <html lang="en">
 
 <head>
-<?php include_once "./navegacion/head.php"?>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Planillas
+  </title>
+  <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+  <link rel="icon" href="assets/img/nomina.ico" type="image/x-icon" />
+  <!-- Fonts and icons -->
+  <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+  <script src="assets/js/font.js"></script>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/plugins.min.css" />
+  <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
@@ -21,12 +36,12 @@
       <div class="container">
         <div class="page-inner">
           <div class="page-header">
-            <h3 class="fw-bold mb-3">Puestos</h3>
+            <h3 class="fw-bold mb-3">Turnos</h3>
           </div>
 
           <button type="button" class="btn btn-secondary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="btn-label"><i class="fa fa-plus"></i></span>
-            Agregar Nuevo Puesto
+            Agregar Nuevo Turno
           </button>
 
           <!-- Modal para agregar/editar empresa -->
@@ -35,7 +50,7 @@
             <div class="modal-dialog modal-md">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="modalTitle">Agregar Puesto</h5>
+                  <h5 class="modal-title" id="modalTitle">Agregar Turno</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="puestoForm" action="#" method="post" enctype="multipart/form-data">
@@ -49,11 +64,11 @@
                                 <div class="col-md-12 col-lg-12">
                                   <div class="form-group">
                                     <input type="text" class="form-control" name="nombre" id="name"
-                                      placeholder="Ej. Cocinero" required />
+                                      placeholder="Ej. AM" required />
                                   </div>
                                   <br>
                                   <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary">Guardar Puesto</button>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
                                   </div>
                                 </div>
                               </div>
@@ -78,7 +93,8 @@
                 <div class="card">
                   <div class="card-header">
                     <div class="d-flex align-items-center">
-                      <h4 class="card-title">Puestos Añadidos Recientemente</h4>
+                      <h4 class="card-title">Turnos Añadidos Recientemente</h4>
+ 
                     </div>
                   </div>
                   <div class="card-body">
@@ -87,14 +103,14 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Nombre del Puesto</th>
+                            <th>Nombre del Turno</th>
                             <th style="width: 10%">Accion</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
                             <th>#</th>
-                            <th>Nombre del Puesto</th>
+                            <th>Nombre del Turno</th>
                             <th>Accion</th>
                           </tr>
                         </tfoot>
@@ -162,7 +178,7 @@
 
     <!-- Kaiadmin JS -->
     <script src="assets/js/kaiadmin.min.js"></script>
-
+    <script src="assets/js/paginacion.js"></script>
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
     <script src="assets/js/setting-demo.js"></script>
     <script src="assets/js/demo.js"></script>
