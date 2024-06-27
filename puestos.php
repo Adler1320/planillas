@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Planillas
@@ -81,6 +82,12 @@
               </div>
             </div>
           </div>
+
+
+
+          <!-- TABLA PARA VER TODOS LOS PUESTOS DE TRABAJO -->
+ 
+          <!-- TABLA PARA VER TODOS LOS PUESTOS DE TRABAJO -->
 
 
         </div>
