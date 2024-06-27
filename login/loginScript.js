@@ -19,6 +19,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event){
                 // Redirigir a una página segura o actualizar la interfaz de usuario
                 window.location.href = 'index.php';
                 console.log(response);
+
             } else {
                 // Mostrar mensaje de error
                 document.getElementById('message').innerHTML = response.message;

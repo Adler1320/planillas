@@ -10,7 +10,9 @@ if ($result->num_rows > 0) {
     echo '<div class="container"><br><br><div class="row">';
     while ($row = $result->fetch_assoc()) {
         // Reemplaza "../" con "" en la ruta del logo
-        $logoPath = str_replace("../", "", $row["logo"]);
+        $logoName= $row["logo"];
+        $imageName= basename($logoName);
+        $logoPath = "./assets/img/logos/" . $imageName;
 
         echo '<div class="col-md-4">';
         echo '  <div class="card card-profile">';

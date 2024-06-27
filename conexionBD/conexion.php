@@ -13,5 +13,5 @@ if ($conn->connect_error) {
     echo json_encode(['success' => false, 'message' => 'Error de conexión: ' . $conn->connect_error]);
     exit;
 }
-
+//echo "holaaa todo funcionanado"
 ?>
