@@ -6,16 +6,15 @@ include 'conexionBD/conexion.php';
 $sql = "SELECT 
             u.Nombre, 
             u.username, 
-            u.pass, 
-            u.correo, 
-            u.id_Local, 
+            u.pass,  
+            u.idLocal, 
             u.tipodeusuario, 
             u.estado, 
             l.nombreLocal AS nombrelocal  -- Esto asume que la tabla 'local' tiene una columna 'nombreLocal'
         FROM 
             usuario u
         JOIN 
-            local l ON u.id_Local = l.idLocal";
+            local l ON u.idLocal = l.idLocal";
 
 $result = $conn->query($sql);
 ?>

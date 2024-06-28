@@ -31,5 +31,6 @@
   <!-- Kaiadmin DEMO methods, don't include it in your project! -->
   <script src="assets/js/setting-demo.js"></script>
   <script src="assets/js/demo.js"></script>
+  <script src="assets/js/paginacion.js"></script>
  
  

@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
         echo '        <div class="desc">' . $row["telefono"] . '</div>';
         echo '        <div class="desc">' . $row["telefono2"] . '</div>';
         echo '        <div class="view-profile">';
-        echo '          <button class="btn btn-secondary w-100" onclick="editEmpresa(' . $row["idLocal"] . ')">Editar Empresa</button>';
+        echo '          <button class="btn btn-secondary w-100" onclick="showModal(' . $row["idLocal"] . ')">Editar Empresa</button>';
         echo '        </div>';
         echo '      </div>';
         echo '    </div>';
@@ -56,3 +56,9 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<script>
+function showModal(id_local){
+$('#ModalEditarEmpresa').modal('show');
+console.log(id_local);
+}
+</script>

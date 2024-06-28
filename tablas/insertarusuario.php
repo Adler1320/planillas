@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Insertar los datos en la base de datos
-    $sql = "INSERT INTO usuario (Nombre, username, pass, id_Local, tipodeusuario, estado, foto_perfil) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO usuario (Nombre, username, pass, idLocal, tipodeusuario, estado, foto_perfil) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
