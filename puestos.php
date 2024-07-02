@@ -94,13 +94,13 @@
                               <?php while ($row = $result->fetch_assoc()) { ?>
                               <tr>
                                 <td><?php echo $contador +=1 ?></td>
-                                <td><?php echo $row['nombrepuesto'] ?></td>
+                                <td><?php echo isset($row['nombrepuesto']) ? $row['nombrepuesto'] : 'No existen puestos aún'; ?></td>
                                 <td>
                                   <div class="form-button-action">
                                     <button type="button" onclick="showModal(<?php echo $row['idpuestoempleado']; ?>, '<?php echo $row['nombrepuesto']; ?>')" class="btn btn-link btn-primary btn-lg" >
                                       <i class="fa fa-edit"></i>
                                     </button>
-                                    <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                    <button type="button" onclick="eliminarPuesto(<?php echo $row['idpuestoempleado']?>)" class="btn btn-link btn-danger" data-original-title="Remove">
                                       <i class="fa fa-times"></i>
                                     </button>
                                   </div>
