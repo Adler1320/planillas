@@ -1,6 +1,5 @@
 function showModal(id_local) {
-    //console.log("showModal called with id_local: ", id_local);
-
+    
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost/planillas/tablas/datoslocales.php?id=' + id_local, true);
     xhr.onreadystatechange = function() {
