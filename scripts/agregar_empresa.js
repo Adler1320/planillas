@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Enviar formulario con AJAX
-        fetch('http://localhost/planillas/tablas/EditarEmpresaModal.php', {
+        fetch('http://localhost/planillas/tablas/insertarlocales.php', {
             method: 'POST',
             body: formData
         })
