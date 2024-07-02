@@ -62,8 +62,7 @@
               include 'conexionBD/conexion.php';
               $sql = "SELECT * FROM puestoempleado";
               $result = $conn->query($sql);
-              if ($result->num_rows > 0) { 
-                $contador=0;
+             
               ?>
                 <div class="row">
                   <div class="col-md-12">
@@ -91,30 +90,39 @@
                               </tr>
                             </tfoot>
                             <tbody>
-                              <?php while ($row = $result->fetch_assoc()) { ?>
+                              <?php 
+                               if ($result->num_rows > 0) { 
+                                $contador=0;
+                              while ($row = $result->fetch_assoc()) { ?>
                               <tr>
-                                <td><?php echo $contador +=1 ?></td>
-                                <td><?php echo isset($row['nombrepuesto']) ? $row['nombrepuesto'] : 'No existen puestos aún'; ?></td>
+                                <td><?php echo $contador +=1; ?></td>
+                                <td><?php echo $row['nombrepuesto']; ?></td>
                                 <td>
                                   <div class="form-button-action">
                                     <button type="button" onclick="showModal(<?php echo $row['idpuestoempleado']; ?>, '<?php echo $row['nombrepuesto']; ?>')" class="btn btn-link btn-primary btn-lg" >
                                       <i class="fa fa-edit"></i>
                                     </button>
-                                    <button type="button" onclick="eliminarPuesto(<?php echo $row['idpuestoempleado']?>)" class="btn btn-link btn-danger" data-original-title="Remove">
+                                    <button type="button" onclick="eliminarPuesto(<?php echo $row['idpuestoempleado'];?>)" class="btn btn-link btn-danger" data-original-title="Remove">
                                       <i class="fa fa-times"></i>
                                     </button>
                                   </div>
                                 </td>
                               </tr>
-                              <?php } ?>
+                              <?php }} else{?>
+                                <tr>
+                                      <td >#</td>
+                                      <td >No existen puestos aún.</td>
+                                      <td ></td>
+                                 </tr>
+                                    <?php } ?>
                             </tbody>
                           </table>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              <?php } ?>
+                </div> 
+            </div>
             </div>
           </div>
         </div>
