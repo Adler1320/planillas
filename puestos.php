@@ -168,9 +168,7 @@
 </div>
     <!-- End Custom template -->
     <?php include_once "./navegacion/footer.php" ?>
-    <script src="scriptTurnosPuestos/insertarPuesto.js"></script>
-    <script src="scriptTurnosPuestos/editarPuesto.js"></script>
-    <script src="scriptTurnosPuestos/eliminarPuesto.js"></script>
+    <script src="scriptTurnosPuestos/Puestos.js"></script>
   </div>
 </body>
 </html>

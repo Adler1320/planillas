@@ -1,7 +1,7 @@
 function showModal(id_local) {
     
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost/planillas/tablas/datoslocales.php?id=' + id_local, true);
+    xhr.open('GET', 'tablas/datoslocales.php?id=' + id_local, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
            // console.log("AJAX success, response:", xhr.responseText); // Verificar la respuesta de AJAX en la consola
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Enviar formulario con AJAX
-        fetch('http://localhost/planillas/tablas/EditarEmpresaModal.php', {
+        fetch('tablas/EditarEmpresaModal.php', {
             method: 'POST',
             body: formData
         })
