@@ -125,7 +125,7 @@ if ($result->num_rows > 0) { ?>
         <div class="name"> <?php echo $row["nombrelocal"] ?></div>
        <div class="job"><?php echo $row["direccionlocal"] ?></div><br>
         <div class="desc"><?php echo $row["telefono"]  ?></div>
-        <div class="desc"><?php echo $row["telefono2"] ?></div>
+        <div class="desc"><?php echo !empty($row["telefono2"]) ? $row["telefono2"] : "0000-0000";  ?></div>
         <div class="view-profile">
         <button type="button" class="btn btn-secondary"  onClick="showModal(<?php echo $row["idLocal"]?>)">Editar Empresa</button>     
         </div>

@@ -562,9 +562,6 @@
             </div>
           </div>
         </div>
-        <!-- TABLA PARA VER TODOS LOS USUARIOS -->
-
-
       </div>
     </div>
 
